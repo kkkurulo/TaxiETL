@@ -49,6 +49,8 @@ public class EtlMainLogic
         foreach (var record in records)
         {
             record.StoreAndFwdFlag = record.StoreAndFwdFlag?.Trim();
+            record.PickupString = record.PickupString?.Trim();
+            record.DropoffString = record.DropoffString?.Trim();
 
             string key = $"{record.PickupString}-{record.DropoffString}-{record.PassengerCount}";
 
